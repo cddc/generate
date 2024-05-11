@@ -38,6 +38,7 @@ class BaichuanMessage(TypedDict):
 
 class BaichuanChatParameters(ModelParameters):
     temperature: Optional[Temperature] = None
+    max_tokens: Optional[PositiveInt] = None
     top_k: Optional[Annotated[int, Field(ge=0)]] = None
     top_p: Optional[Probability] = None
     search: Optional[bool] = Field(default=None, alias='with_search_enhance')
